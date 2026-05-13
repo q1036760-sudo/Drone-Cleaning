@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drone Cleaning Solutions — Professional Building Cleaning Services</title>
+<meta name="description" content="Professional drone-powered building cleaning with ionized water. 3-5x faster, up to 60% cheaper than scaffolding. Serving Mexico and El Salvador.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+/* ── RESET & TOKENS ─────────────────────────────── */
+:root {
+  --bg:       #ffffff;
+  --bg2:      #f8f9fb;
+  --bg3:      #f0f4f8;
+  --ink:      #0f1a2e;
+  --ink2:     #334155;
+  --ink3:     #64748b;
+  --accent:   #0369a1;
+  --accent2:  #0ea5e9;
+  --green:    #059669;
+  --red:      #dc2626;
+  --border:   #e2e8f0;
+  --nav-h:    68px;
+}
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; font-size:16px; }
+body {
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Inter', system-ui, sans-serif;
+  font-size:1rem;
+  line-height:1.7;
+  overflow-x:hidden;
+  cursor:default;
+}
+img { display:block; max-width:100%; }
+a { color:inherit; }
+
+/* ── NAV ──────────────────────────────────────── */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:200;
+  height:var(--nav-h);
+  background:#fff;
+  border-bottom:1px solid var(--border);
+  display:flex; align-items:center; justify-content:space-between;
+  padding:0 5vw;
+  box-shadow:0 1px 3px rgba(0,0,0,.05);
+}
+.nav-brand { display:flex; align-items:center; gap:.75rem; text-decoration:none; }
+.nav-brand-icon {
+  width:36px; height:36px;
+  background:var(--accent);
+  border-radius:4px;
+  display:flex; align-items:center; justify-content:center;
+  flex-shrink:0;
+}
+.nav-brand-icon svg { width:20px; height:20px; stroke:#fff; fill:none; stroke-width:2; }
+.nav-brand-name { font-weight:700; font-size:1rem; color:var(--ink); letter-spacing:-.01em; }
+.nav-brand-tag { font-size:.7rem; color:var(--ink3); font-weight:400; display:block; line-height:1; margin-top:.1rem; }
+.nav-links { display:flex; gap:2rem; list-style:none; }
+.nav-links a {
+  font-size:.85rem; color:var(--ink3); text-decoration:none;
+  font-weight:500; padding:.25rem 0;
+  border-bottom:2px solid transparent;
+  transition:color .2s, border-color .2s;
+}
+.nav-links a:hover { color:var(--ink); border-color:var(--accent2); }
+.nav-cta {
+  background:var(--accent); color:#fff;
+  font-size:.82rem; font-weight:600;
+  padding:.55rem 1.4rem;
+  text-decoration:none; border-radius:4px;
+  transition:background .2s;
+  white-space:nowrap;
+}
+.nav-cta:hover { background:var(--accent2); }
+
+/* ── HERO ─────────────────────────────────────── */
+#hero {
+  margin-top:var(--nav-h);
+  position:relative;
+  min-height:90vh;
+  display:flex; align-items:center;
+  overflow:hidden;
+}
+.hero-bg {
+  position:absolute; inset:0;
+  background:url('https://eauav.com/wp-content/uploads/2025/06/high-rise-buildings.jpg') center/cover no-repeat;
+}
+.hero-bg::after {
+  content:'';
+  position:absolute; inset:0;
+  background:linear-gradient(100deg, rgba(9,17,33,.9) 40%, rgba(9,17,33,.5) 100%);
+}
+.hero-inner {
+  position:relative; z-index:1;
+  max-width:1200px; margin:0 auto;
+  padding:5rem 5vw;
+  width:100%;
+}
+.hero-label {
+  font-size:.72rem; letter-spacing:.18em; text-transform:uppercase;
+  color:#93c5fd; font-weight:600; margin-bottom:1.25rem;
+  display:flex; align-items:center; gap:.5rem;
+}
+.hero-label::before { content:''; width:20px; height:1px; background:#93c5fd; }
+.hero-inner h1 {
+  font-family:'Playfair Display', serif;
+  font-size:clamp(2.6rem, 5vw, 4.2rem);
+  font-weight:700; line-height:1.1;
+  color:#fff; margin-bottom:1.5rem;
+  max-width:640px;
+}
+.hero-inner h1 em { font-style:italic; color:#7dd3fc; }
+.hero-desc {
+  font-size:1.1rem; color:rgba(255,255,255,.72);
+  line-height:1.75; max-width:500px; margin-bottom:2.5rem;
+}
+.hero-desc strong { color:#fff; font-weight:500; }
+.hero-btns { display:flex; gap:.85rem; flex-wrap:wrap; }
+.btn-main {
+  display:inline-flex; align-items:center; gap:.5rem;
+  background:var(--accent2); color:#fff;
+  font-size:.88rem; font-weight:600; letter-spacing:.02em;
+  padding:.8rem 1.75rem; text-decoration:none; border-radius:4px;
+  transition:background .2s, transform .15s;
+}
+.btn-main:hover { background:#0284c7; transform:translateY(-1px); }
+.btn-main svg { width:14px; height:14px; stroke:currentColor; fill:none; stroke-width:2.5; }
+.btn-outline {
+  display:inline-flex; align-items:center; gap:.5rem;
+  border:1px solid rgba(255,255,255,.35); color:rgba(255,255,255,.85);
+  font-size:.88rem; font-weight:500;
+  padding:.8rem 1.75rem; text-decoration:none; border-radius:4px;
+  transition:border-color .2s, color .2s;
+}
+.btn-outline:hover { border-color:#fff; color:#fff; }
+.hero-kpis {
+  display:flex; gap:2.5rem; flex-wrap:wrap;
+  margin-top:3.5rem; padding-top:2.5rem;
+  border-top:1px solid rgba(255,255,255,.1);
+}
+.kpi-num {
+  font-family:'Playfair Display', serif;
+  font-size:2.25rem; font-weight:700; color:#7dd3fc; line-height:1;
+}
+.kpi-label { font-size:.75rem; color:rgba(255,255,255,.5); text-transform:uppercase; letter-spacing:.1em; margin-top:.25rem; }
+
+/* ── SHARED SECTION STYLES ────────────────────── */
+section { padding:5.5rem 5vw; }
+.section-wrap { max-width:1200px; margin:0 auto; }
+.eyebrow {
+  font-size:.72rem; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--accent2); font-weight:600; margin-bottom:.85rem;
+  display:flex; align-items:center; gap:.5rem;
+}
+.eyebrow::before { content:''; width:16px; height:1px; background:var(--accent2); }
+h2.title {
+  font-family:'Playfair Display', serif;
+  font-size:clamp(1.9rem, 3.2vw, 2.75rem);
+  font-weight:700; line-height:1.18;
+  color:var(--ink); margin-bottom:1rem;
+}
+h2.title em { font-style:italic; color:var(--accent2); }
+.lead { font-size:1.05rem; color:var(--ink3); line-height:1.75; max-width:540px; margin-bottom:2.5rem; }
+
+/* ── STATS STRIP ──────────────────────────────── */
+#stats {
+  background:var(--ink);
+  padding:0;
+}
+.stats-row { display:grid; grid-template-columns:repeat(4,1fr); }
+.stat-cell {
+  padding:2.75rem 2rem; text-align:center;
+  border-right:1px solid rgba(255,255,255,.07);
+}
+.stat-cell:last-child { border:none; }
+.stat-num {
+  font-family:'Playfair Display', serif;
+  font-size:2.75rem; font-weight:700; color:#7dd3fc;
+  line-height:1; margin-bottom:.4rem;
+}
+.stat-label { font-size:.75rem; color:rgba(255,255,255,.45); text-transform:uppercase; letter-spacing:.1em; }
+
+/* ── PROBLEM ──────────────────────────────────── */
+#problem { background:var(--bg2); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+.problem-layout { display:grid; grid-template-columns:1fr 1fr; gap:4.5rem; align-items:center; }
+.problem-img-wrap { position:relative; overflow:hidden; }
+.problem-img-wrap img { width:100%; height:480px; object-fit:cover; border-radius:2px; }
+.img-label {
+  position:absolute; bottom:1.25rem; left:1.25rem;
+  background:rgba(255,255,255,.95);
+  border-left:3px solid var(--green);
+  padding:.55rem 1rem;
+  font-size:.78rem; font-weight:600; color:var(--ink);
+  border-radius:0 2px 2px 0;
+}
+.vs-list { display:grid; gap:.85rem; }
+.vs-item {
+  background:var(--bg); border:1px solid var(--border);
+  padding:1.25rem 1.5rem 1.25rem 1.75rem;
+  border-radius:2px; position:relative;
+}
+.vs-item::before { content:''; position:absolute; top:0; left:0; width:3px; height:100%; border-radius:2px 0 0 2px; }
+.vs-item.neg::before { background:var(--red); }
+.vs-item.pos::before { background:var(--green); }
+.vs-type {
+  font-size:.68rem; letter-spacing:.14em; text-transform:uppercase;
+  font-weight:700; margin-bottom:.45rem;
+}
+.vs-item.neg .vs-type { color:var(--red); }
+.vs-item.pos .vs-type { color:var(--green); }
+.vs-item p { font-size:.93rem; color:var(--ink2); line-height:1.6; margin:0; }
+
+/* ── FEATURES ─────────────────────────────────── */
+#features { background:var(--bg); border-top:1px solid var(--border); }
+.features-grid {
+  display:grid; grid-template-columns:repeat(3,1fr);
+  gap:1px; background:var(--border);
+  border:1px solid var(--border); border-radius:3px;
+  overflow:hidden;
+}
+.feat {
+  background:var(--bg);
+  transition:background .22s;
+}
+.feat:hover { background:var(--bg2); }
+.feat-photo { overflow:hidden; }
+.feat-photo img { width:100%; height:210px; object-fit:cover; transition:transform .45s; }
+.feat:hover .feat-photo img { transform:scale(1.04); }
+.feat-body { padding:1.6rem; }
+.feat-n {
+  font-family:'DM Mono', monospace; font-size:.65rem;
+  color:var(--accent2); letter-spacing:.1em; margin-bottom:.6rem; opacity:.8;
+}
+.feat h3 { font-size:1.05rem; font-weight:600; color:var(--ink); margin-bottom:.55rem; }
+.feat p { font-size:.9rem; color:var(--ink3); line-height:1.65; margin:0; }
+
+/* ── BEFORE/AFTER ─────────────────────────────── */
+#results { background:var(--bg2); border-top:1px solid var(--border); }
+.results-img { border:1px solid var(--border); overflow:hidden; border-radius:2px; }
+.results-img img { width:100%; height:auto; max-height:500px; object-fit:cover; }
+
+/* ── PROCESS ──────────────────────────────────── */
+#process { background:var(--bg); border-top:1px solid var(--border); }
+.process-steps {
+  display:grid; grid-template-columns:repeat(4,1fr); gap:1.25rem;
+  margin-top:2.5rem;
+}
+.step {
+  border:1px solid var(--border); padding:1.75rem 1.4rem;
+  border-radius:2px; background:var(--bg);
+  transition:border-color .2s, box-shadow .2s;
+}
+.step:hover { border-color:var(--accent2); box-shadow:0 2px 12px rgba(14,165,233,.08); }
+.step-n {
+  font-family:'DM Mono', monospace; font-size:.78rem; color:var(--accent2);
+  border:1px solid var(--border); width:34px; height:34px;
+  display:flex; align-items:center; justify-content:center;
+  border-radius:2px; margin-bottom:1rem;
+}
+.step h3 { font-size:.95rem; font-weight:600; color:var(--ink); margin-bottom:.5rem; }
+.step p { font-size:.875rem; color:var(--ink3); line-height:1.6; margin:0; }
+
+/* ── GALLERY ──────────────────────────────────── */
+#gallery { background:var(--bg2); border-top:1px solid var(--border); }
+.gallery-hero { overflow:hidden; border:1px solid var(--border); margin-bottom:1px; border-radius:2px; }
+.gallery-hero img { width:100%; height:440px; object-fit:cover; }
+.gallery-grid {
+  display:grid; grid-template-columns:repeat(3,1fr);
+  gap:1px; background:var(--border);
+  border:1px solid var(--border); border-radius:2px; overflow:hidden;
+}
+.gal-item { position:relative; overflow:hidden; height:280px; }
+.gal-item img { width:100%; height:100%; object-fit:cover; transition:transform .45s; }
+.gal-item:hover img { transform:scale(1.04); }
+.gal-cap {
+  position:absolute; bottom:0; left:0; right:0;
+  padding:1.25rem 1rem .8rem;
+  background:linear-gradient(to top, rgba(9,17,33,.8), transparent);
+}
+.gal-cap span { font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.85); }
+
+/* ── BLOG SIDEBAR LAYOUT ──────────────────────── */
+#insights { background:var(--bg); border-top:1px solid var(--border); }
+.insights-layout {
+  display:grid;
+  grid-template-columns:1fr 340px;
+  gap:3.5rem;
+  align-items:start;
+}
+
+/* Featured article */
+.blog-main a { text-decoration:none; display:block; }
+.blog-feat-img { overflow:hidden; border-radius:2px; }
+.blog-feat-img img { width:100%; height:300px; object-fit:cover; transition:transform .45s; }
+.blog-main a:hover .blog-feat-img img { transform:scale(1.03); }
+.blog-feat-body { padding:1.75rem 0 0; }
+.blog-cat {
+  font-size:.68rem; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--accent2); font-weight:600; margin-bottom:.6rem; display:block;
+}
+.blog-feat-body h3 {
+  font-family:'Playfair Display', serif;
+  font-size:1.55rem; font-weight:700; color:var(--ink);
+  line-height:1.28; margin-bottom:.85rem;
+  transition:color .2s;
+}
+.blog-main a:hover h3 { color:var(--accent); }
+.blog-meta-line { font-size:.8rem; color:var(--ink3); margin-bottom:.85rem; }
+.blog-feat-body p { font-size:.97rem; color:var(--ink2); line-height:1.72; margin-bottom:1.25rem; }
+.read-link {
+  display:inline-flex; align-items:center; gap:.4rem;
+  font-size:.85rem; font-weight:600; color:var(--accent); text-decoration:none;
+  border-bottom:1px solid var(--border); padding-bottom:.1rem;
+  transition:color .2s, border-color .2s;
+}
+.read-link:hover { color:var(--accent2); border-color:var(--accent2); }
+.read-link svg { width:13px; height:13px; stroke:currentColor; fill:none; stroke-width:2.5; }
+
+/* Sidebar */
+.blog-sidebar { border-left:1px solid var(--border); padding-left:2.5rem; }
+.sidebar-title {
+  font-size:.72rem; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--ink3); font-weight:600; margin-bottom:1.25rem;
+  padding-bottom:.75rem; border-bottom:1px solid var(--border);
+}
+.sidebar-posts { display:flex; flex-direction:column; gap:0; }
+.sidebar-post {
+  display:flex; gap:1rem; align-items:flex-start;
+  padding:1.1rem 0; border-bottom:1px solid var(--border);
+  text-decoration:none;
+  transition:background .15s;
+}
+.sidebar-post:last-child { border-bottom:none; }
+.sidebar-post-img { width:72px; height:56px; object-fit:cover; flex-shrink:0; border-radius:2px; }
+.sidebar-post-text {}
+.sidebar-post-cat { font-size:.62rem; letter-spacing:.14em; text-transform:uppercase; color:var(--accent2); font-weight:600; display:block; margin-bottom:.3rem; }
+.sidebar-post-title { font-size:.85rem; font-weight:600; color:var(--ink); line-height:1.35; transition:color .2s; }
+.sidebar-post:hover .sidebar-post-title { color:var(--accent); }
+.sidebar-cta {
+  margin-top:1.5rem; padding:1.25rem;
+  background:var(--bg2); border:1px solid var(--border); border-radius:2px;
+  text-align:center;
+}
+.sidebar-cta p { font-size:.85rem; color:var(--ink3); margin-bottom:.85rem; line-height:1.5; }
+.sidebar-cta a {
+  display:block; background:var(--accent); color:#fff;
+  font-size:.82rem; font-weight:600; padding:.65rem 1rem;
+  text-decoration:none; border-radius:3px;
+  transition:background .2s;
+}
+.sidebar-cta a:hover { background:var(--accent2); }
+
+/* ── TESTIMONIAL ──────────────────────────────── */
+#testimonial { background:var(--bg3); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+.testimonial-layout { display:grid; grid-template-columns:1fr 1fr; gap:4.5rem; align-items:center; }
+.testimonial-img img { width:100%; height:440px; object-fit:cover; border-radius:2px; filter:saturate(.85); }
+blockquote {
+  font-family:'Playfair Display', serif;
+  font-size:1.45rem; font-style:italic; font-weight:600;
+  line-height:1.6; color:var(--ink); margin-bottom:1.5rem;
+}
+blockquote em { color:var(--accent2); font-style:normal; }
+.quote-author { display:flex; align-items:center; gap:1rem; }
+.quote-ava {
+  width:44px; height:44px; border-radius:50%;
+  background:var(--accent); display:flex; align-items:center;
+  justify-content:center; font-family:'DM Mono', monospace;
+  font-size:.82rem; color:#fff; flex-shrink:0;
+}
+.quote-name { font-size:.92rem; font-weight:600; color:var(--ink); }
+.quote-role { font-size:.8rem; color:var(--ink3); }
+
+/* ── CTA ──────────────────────────────────────── */
+#cta { background:var(--ink); padding:5.5rem 5vw; }
+.cta-layout { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:center; max-width:1200px; margin:0 auto; }
+.cta-eyebrow { font-size:.72rem; letter-spacing:.18em; text-transform:uppercase; color:#93c5fd; font-weight:600; margin-bottom:.85rem; display:flex; align-items:center; gap:.5rem; }
+.cta-eyebrow::before { content:''; width:16px; height:1px; background:#93c5fd; }
+.cta-title { font-family:'Playfair Display', serif; font-size:clamp(1.9rem,3vw,2.6rem); font-weight:700; line-height:1.15; color:#fff; margin-bottom:1rem; }
+.cta-title em { font-style:italic; color:#7dd3fc; }
+.cta-body { font-size:1rem; color:rgba(255,255,255,.58); line-height:1.75; }
+.cta-checklist { list-style:none; margin-top:1.5rem; display:flex; flex-direction:column; gap:.6rem; }
+.cta-checklist li { display:flex; align-items:center; gap:.65rem; font-size:.9rem; color:rgba(255,255,255,.65); }
+.cta-checklist li svg { width:15px; height:15px; stroke:#7dd3fc; flex-shrink:0; fill:none; stroke-width:2; }
+.cta-form-card {
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.1);
+  padding:2.25rem; border-radius:3px;
+}
+.cta-form-card h3 { font-size:1.05rem; font-weight:600; color:#fff; margin-bottom:.35rem; }
+.cta-form-card > p { font-size:.85rem; color:rgba(255,255,255,.45); margin-bottom:1.6rem; line-height:1.5; }
+.form-fields { display:grid; gap:.65rem; margin-bottom:.85rem; }
+.form-fields input,
+.form-fields select {
+  width:100%; padding:.75rem 1rem;
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.11);
+  border-radius:3px; color:#fff;
+  font-family:'Inter', sans-serif; font-size:.9rem;
+  outline:none; transition:border-color .2s;
+  appearance:none;
+}
+.form-fields input::placeholder { color:rgba(255,255,255,.32); }
+.form-fields input:focus,
+.form-fields select:focus { border-color:#7dd3fc; }
+.form-fields select option { background:#0f1a2e; }
+.btn-submit {
+  width:100%; padding:.8rem;
+  background:var(--accent2); color:#fff;
+  border:none; border-radius:3px; cursor:pointer;
+  font-family:'Inter', sans-serif; font-size:.88rem;
+  font-weight:700; letter-spacing:.04em; text-transform:uppercase;
+  transition:background .2s;
+}
+.btn-submit:hover { background:#0284c7; }
+.form-note { font-size:.73rem; color:rgba(255,255,255,.3); text-align:center; margin-top:.75rem; }
+.form-note a { color:#7dd3fc; text-decoration:none; }
+
+/* ── FOOTER ───────────────────────────────────── */
+footer {
+  background:var(--ink); border-top:1px solid rgba(255,255,255,.07);
+  padding:2.25rem 5vw;
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:1rem;
+}
+.footer-brand { display:flex; align-items:center; gap:.65rem; text-decoration:none; }
+.footer-brand-icon {
+  width:28px; height:28px; background:var(--accent2);
+  border-radius:3px; display:flex; align-items:center; justify-content:center;
+}
+.footer-brand-icon svg { width:16px; height:16px; stroke:#fff; fill:none; stroke-width:2; }
+.footer-brand span { font-size:.92rem; font-weight:600; color:#fff; }
+.footer-links { display:flex; gap:1.75rem; list-style:none; }
+.footer-links a { font-size:.78rem; color:rgba(255,255,255,.38); text-decoration:none; transition:color .2s; }
+.footer-links a:hover { color:#fff; }
+footer p { font-size:.75rem; color:rgba(255,255,255,.3); }
+
+/* ── REVEAL ───────────────────────────────────── */
+.reveal { opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
+.reveal.visible { opacity:1; transform:none; }
+
+/* ── RESPONSIVE ───────────────────────────────── */
+@media(max-width:1024px) {
+  .insights-layout { grid-template-columns:1fr; }
+  .blog-sidebar { border-left:none; padding-left:0; border-top:1px solid var(--border); padding-top:2rem; }
+}
+@media(max-width:900px) {
+  .problem-layout, .testimonial-layout, .cta-layout { grid-template-columns:1fr; gap:2.5rem; }
+  .features-grid, .gallery-grid { grid-template-columns:1fr; }
+  .stats-row { grid-template-columns:repeat(2,1fr); }
+  .process-steps { grid-template-columns:repeat(2,1fr); }
+  .nav-links { display:none; }
+  .gallery-hero img { height:260px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="#" class="nav-brand">
+    <div class="nav-brand-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-6 4 2 7-6-4-6 4 2-7-6-4h7z"/></svg>
+    </div>
+    <div>
+      <span class="nav-brand-name">Drone Cleaning Solutions</span>
+      <span class="nav-brand-tag">Mexico · El Salvador</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#problem">The Problem</a></li>
+    <li><a href="#features">Technology</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#insights">Insights</a></li>
+    <li><a href="#cta">Contact</a></li>
+  </ul>
+  <a href="#cta" class="nav-cta">Book a Call</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="hero-label">Professional Drone-Powered Exterior Cleaning</div>
+    <h1>The <em>Smarter Way</em> to Maintain Buildings at Height</h1>
+    <p class="hero-desc">We eliminate scaffolding, reduce costs by up to <strong>60%</strong>, and remove every worker from height — using precision drone technology and ionized water systems.</p>
+    <div class="hero-btns">
+      <a href="#cta" class="btn-main">
+        Book a Free Call
+        <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+      <a href="#features" class="btn-outline">See how it works</a>
+    </div>
+    <div class="hero-kpis">
+      <div><div class="kpi-num">3–5×</div><div class="kpi-label">Faster than scaffolding</div></div>
+      <div><div class="kpi-num">60%</div><div class="kpi-label">Lower total cost</div></div>
+      <div><div class="kpi-num">800m²</div><div class="kpi-label">Coverage per hour</div></div>
+      <div><div class="kpi-num">0</div><div class="kpi-label">Workers at height</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div id="stats">
+  <div class="stats-row">
+    <div class="stat-cell reveal"><div class="stat-num" data-target="60">0</div><div class="stat-label">% Cost Reduction</div></div>
+    <div class="stat-cell reveal"><div class="stat-num" data-target="40">0</div><div class="stat-label">% Less Downtime</div></div>
+    <div class="stat-cell reveal"><div class="stat-num" data-target="4">0</div><div class="stat-label">× Faster Than Manual</div></div>
+    <div class="stat-cell reveal"><div class="stat-num">0</div><div class="stat-label">Human Risk at Height</div></div>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section id="problem">
+  <div class="section-wrap">
+    <div class="problem-layout">
+      <div class="problem-img-wrap reveal">
+        <img src="https://eauav.com/wp-content/uploads/2025/06/facade-cleaning-drone-768x473.jpg" alt="Drone cleaning glass facade building professionally">
+        <div class="img-label">Drone-powered cleaning — no scaffolding required</div>
+      </div>
+      <div class="reveal">
+        <div class="eyebrow">The Challenge</div>
+        <h2 class="title">Traditional Building Cleaning Is <em>Overdue for Change</em></h2>
+        <p class="lead">High-rise exterior maintenance has remained largely unchanged for decades — expensive, disruptive, and unnecessarily dangerous for workers.</p>
+        <div class="vs-list">
+          <div class="vs-item neg">
+            <div class="vs-type">Problem — Traditional scaffolding</div>
+            <p>Weeks of rigging, tens of thousands in equipment costs, and workers exposed to fatal fall hazards at height. Operations come to a standstill.</p>
+          </div>
+          <div class="vs-item neg">
+            <div class="vs-type">Problem — Rope access & abseiling</div>
+            <p>Requires expensive specialists, is weather-dependent, and carries significant liability exposure — limiting how often buildings can be cleaned.</p>
+          </div>
+          <div class="vs-item pos">
+            <div class="vs-type">Solution — Drone Cleaning Solutions</div>
+            <p>One operator on the ground. The drone reaches every surface. Ionized water cleans without chemicals. No scaffolding, no liability, no delays.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="section-wrap">
+    <div class="reveal" style="max-width:540px;margin-bottom:3rem;">
+      <div class="eyebrow">Our Technology</div>
+      <h2 class="title">Built for Precision, <em>Designed for Safety</em></h2>
+      <p class="lead">Three technology pillars that make drone cleaning the most advanced exterior maintenance solution available to commercial property managers today.</p>
+    </div>
+    <div class="features-grid reveal">
+      <div class="feat">
+        <div class="feat-photo"><img src="https://eauav.com/wp-content/uploads/2026/05/EAUAV-Vertex-C80C80P-Facade-Cleaning-Drone-System.png" alt="Ionized water drone cleaning system"></div>
+        <div class="feat-body">
+          <div class="feat-n">01 / 03</div>
+          <h3>Ionized Water System</h3>
+          <p>Ionized water neutralizes bacteria, cuts through grease, and leaves a streak-free, chemical-free finish. No toxic residue. No damage to surfaces or seals.</p>
+        </div>
+      </div>
+      <div class="feat">
+        <div class="feat-photo"><img src="https://eauav.com/wp-content/uploads/2025/07/7%E6%9C%8830%E6%97%A5-26-%E6%83%A0%E5%B7%9E%E4%B8%A4%E5%8F%B0-%E5%B0%81%E9%9D%A2-300x169.jpg" alt="Commercial drone cleaning operation"></div>
+        <div class="feat-body">
+          <div class="feat-n">02 / 03</div>
+          <h3>Precision Drone Access</h3>
+          <p>Tethered heavy-lift drones reach any surface at any height. Operational within minutes, covering 400–800m² per hour. No scaffolding, ever.</p>
+        </div>
+      </div>
+      <div class="feat">
+        <div class="feat-photo"><img src="https://eauav.com/wp-content/uploads/2025/07/7%E6%9C%8830%E6%97%A5-25-%E5%AE%81%E6%B3%A2%E5%8C%97%E4%BB%91%E7%94%B5%E5%8E%821-%E5%B0%81%E9%9D%A2-300x169.jpg" alt="Industrial drone facade cleaning operation"></div>
+        <div class="feat-body">
+          <div class="feat-n">03 / 03</div>
+          <h3>Zero-Risk Operations</h3>
+          <p>Real-time obstacle detection, automated failsafes, and full liability coverage. Every operation eliminates human exposure at height entirely.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section id="results">
+  <div class="section-wrap">
+    <div class="reveal" style="margin-bottom:2rem;">
+      <div class="eyebrow">Real Results</div>
+      <h2 class="title">See the <em>Difference</em></h2>
+    </div>
+    <div class="results-img reveal">
+      <img src="https://static.wixstatic.com/media/cafe27_7e9703ee3014418d92e1d7fdf1e07767~mv2.jpg/v1/fill/w_1200,h_675,al_c,q_90/drone%20building%20cleaning%20removal%20of%20organic%20mineral%20stains%20by%20dronewashplus.jpg" alt="Before and after drone cleaning — years of grime removed from commercial building facade">
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="section-wrap">
+    <div class="reveal">
+      <div class="eyebrow">How It Works</div>
+      <h2 class="title">Four Steps to a <em>Flawless Result</em></h2>
+    </div>
+    <div class="process-steps">
+      <div class="step reveal">
+        <div class="step-n">01</div>
+        <h3>Book a Call</h3>
+        <p>Speak with our specialist. We evaluate your building — height, surface, access — and provide a full scope within 48 hours.</p>
+      </div>
+      <div class="step reveal" style="transition-delay:.07s">
+        <div class="step-n">02</div>
+        <h3>Mission Planning</h3>
+        <p>We program precise flight paths, select ionization settings, and schedule around your facility's operational requirements.</p>
+      </div>
+      <div class="step reveal" style="transition-delay:.14s">
+        <div class="step-n">03</div>
+        <h3>Drone Deployment</h3>
+        <p>One ground operator deploys the drone. Your building is cleaned systematically — every panel, every window — zero disruption.</p>
+      </div>
+      <div class="step reveal" style="transition-delay:.21s">
+        <div class="step-n">04</div>
+        <h3>Quality Report</h3>
+        <p>Post-clean drone footage and a full inspection report delivered within 24 hours — complete compliance documentation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="section-wrap">
+    <div class="reveal" style="margin-bottom:2rem;">
+      <div class="eyebrow">Our Work in Action</div>
+      <h2 class="title">Real Projects. <em>Real Results.</em></h2>
+    </div>
+    <div class="gallery-hero reveal">
+      <img src="https://eauav.com/wp-content/uploads/2025/06/high-rise-buildings.jpg" alt="Drone cleaning high-rise commercial building facade">
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="gal-item">
+        <img src="https://eauav.com/wp-content/uploads/2025/06/facade-cleaning-drone-768x473.jpg" alt="Drone cleaning glass facade close-up">
+        <div class="gal-cap"><span>Glass facade · Precision nozzle system</span></div>
+      </div>
+      <div class="gal-item">
+        <img src="https://eauav.com/wp-content/uploads/2025/07/7%E6%9C%8830%E6%97%A5-26-%E6%83%A0%E5%B7%9E%E4%B8%A4%E5%8F%B0-%E5%B0%81%E9%9D%A2-300x169.jpg" alt="Multi-drone commercial building cleaning operation">
+        <div class="gal-cap"><span>Corporate HQ · Multi-drone deployment</span></div>
+      </div>
+      <div class="gal-item">
+        <img src="https://eauav.com/wp-content/uploads/2025/06/Spider-Man-high-rise-manual-cleaning-768x432.jpg" alt="Traditional rope access cleaning vs drone">
+        <div class="gal-cap"><span>Traditional methods vs. drone technology</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSIGHTS (Blog in sidebar layout) -->
+<section id="insights">
+  <div class="section-wrap">
+    <div class="reveal" style="margin-bottom:2.5rem;">
+      <div class="eyebrow">Industry Insights</div>
+      <h2 class="title">Knowledge &amp; <em>Expert Guides</em></h2>
+      <p class="lead">In-depth articles for facility managers and building owners across Latin America.</p>
+    </div>
+    <div class="insights-layout reveal">
+
+      <!-- Featured article -->
+      <div class="blog-main">
+        <a href="blog-drone-cleaning-latin-america.html">
+          <div class="blog-feat-img">
+            <img src="https://eauav.com/wp-content/uploads/2025/06/high-rise-buildings.jpg" alt="Why Drone Cleaning Is the Smarter Way to Maintain Buildings in Latin America">
+          </div>
+          <div class="blog-feat-body">
+            <span class="blog-cat">Featured Article · Industry Insight</span>
+            <h3>Why Drone Cleaning Is the Smarter Way to Maintain Buildings in Latin America</h3>
+            <div class="blog-meta-line">May 2026 &nbsp;·&nbsp; 12 min read &nbsp;·&nbsp; Mexico &amp; El Salvador</div>
+            <p>Thousands of commercial buildings across Latin America are still cleaned with scaffolding and ropes. There is a faster, safer, and dramatically cheaper alternative — and this is the most complete explanation of it available today.</p>
+            <span class="read-link">
+              Read the full article
+              <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="blog-sidebar">
+        <div class="sidebar-title">More Articles</div>
+        <div class="sidebar-posts">
+          <a href="blog-drone-cleaning-latin-america.html" class="sidebar-post">
+            <img class="sidebar-post-img" src="https://eauav.com/wp-content/uploads/2026/05/EAUAV-Vertex-C80C80P-Facade-Cleaning-Drone-System.png" alt="Ionized water technology">
+            <div class="sidebar-post-text">
+              <span class="sidebar-post-cat">Technology</span>
+              <div class="sidebar-post-title">How Ionized Water Works: The Science Behind Chemical-Free Cleaning</div>
+            </div>
+          </a>
+          <a href="blog-drone-cleaning-latin-america.html" class="sidebar-post">
+            <img class="sidebar-post-img" src="https://eauav.com/wp-content/uploads/2025/06/facade-cleaning-drone-768x473.jpg" alt="Cost analysis drone cleaning">
+            <div class="sidebar-post-text">
+              <span class="sidebar-post-cat">Cost Analysis</span>
+              <div class="sidebar-post-title">Drone Cleaning vs Scaffolding: Full Cost Breakdown for Latin America</div>
+            </div>
+          </a>
+          <a href="blog-drone-cleaning-latin-america.html" class="sidebar-post">
+            <img class="sidebar-post-img" src="https://eauav.com/wp-content/uploads/2025/07/7%E6%9C%8830%E6%97%A5-26-%E6%83%A0%E5%B7%9E%E4%B8%A4%E5%8F%B0-%E5%B0%81%E9%9D%A2-300x169.jpg" alt="Safety drone cleaning">
+            <div class="sidebar-post-text">
+              <span class="sidebar-post-cat">Safety</span>
+              <div class="sidebar-post-title">Is Drone Cleaning Safe? Regulations, Insurance &amp; Risk Explained</div>
+            </div>
+          </a>
+          <a href="blog-drone-cleaning-latin-america.html" class="sidebar-post">
+            <img class="sidebar-post-img" src="https://eauav.com/wp-content/uploads/2025/07/7%E6%9C%8830%E6%97%A5-25-%E5%AE%81%E6%B3%A2%E5%8C%97%E4%BB%91%E7%94%B5%E5%8E%821-%E5%B0%81%E9%9D%A2-300x169.jpg" alt="El Salvador market growth">
+            <div class="sidebar-post-text">
+              <span class="sidebar-post-cat">Market Insight</span>
+              <div class="sidebar-post-title">El Salvador's Commercial Property Boom and Building Maintenance</div>
+            </div>
+          </a>
+        </div>
+        <div class="sidebar-cta">
+          <p>Ready to discuss your building's maintenance needs?</p>
+          <a href="#cta">Book a Free Call →</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section id="testimonial">
+  <div class="section-wrap">
+    <div class="testimonial-layout">
+      <div class="testimonial-img reveal">
+        <img src="https://eauav.com/wp-content/uploads/2025/06/facade-cleaning-drone-768x473.jpg" alt="Professional drone cleaning operation">
+      </div>
+      <div class="reveal">
+        <div class="eyebrow">Client Feedback</div>
+        <blockquote>"The transition to drone-powered cleaning has completely transformed our facility management. We have seen a <em>40% reduction in downtime</em> and total elimination of scaffolding risk."</blockquote>
+        <div class="quote-author">
+          <div class="quote-ava">MT</div>
+          <div>
+            <div class="quote-name">Marcus Thorne</div>
+            <div class="quote-role">Facility Manager, Global Logistics Hub</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="cta-layout">
+    <div class="reveal">
+      <div class="cta-eyebrow">Get in Touch</div>
+      <div class="cta-title">Schedule a <em>Free Consultation</em></div>
+      <p class="cta-body">Speak directly with one of our drone cleaning specialists. We will assess your building, answer every question, and provide a tailored scope of work — no obligation.</p>
+      <ul class="cta-checklist">
+        <li><svg viewBox="0 0 16 16"><path d="M3 8l3 3 7-6"/></svg>30-minute call — video or phone</li>
+        <li><svg viewBox="0 0 16 16"><path d="M3 8l3 3 7-6"/></svg>Custom quote delivered within 48 hours</li>
+        <li><svg viewBox="0 0 16 16"><path d="M3 8l3 3 7-6"/></svg>No commitment required</li>
+      </ul>
+    </div>
+    <div class="cta-form-card reveal">
+      <h3>Book Your Free Call</h3>
+      <p>Complete this form and we will be in touch within one business day.</p>
+      <div class="form-fields">
+        <input type="text" placeholder="Full name">
+        <input type="text" placeholder="Company name">
+        <input type="email" placeholder="Work email address">
+        <input type="tel" placeholder="Phone number">
+        <select><option value="" disabled selected>Building type</option><option>Office / Commercial</option><option>Industrial / Warehouse</option><option>Retail / Shopping Centre</option><option>Healthcare Facility</option><option>Hotel / Hospitality</option><option>Other</option></select>
+      </div>
+      <button class="btn-submit" type="button">Submit Request</button>
+      <p class="form-note">Or email us directly: <a href="mailto:hello@dronecleaningsolutions.com">hello@dronecleaningsolutions.com</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#" class="footer-brand">
+    <div class="footer-brand-icon">
+      <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-6 4 2 7-6-4-6 4 2-7-6-4h7z"/></svg>
+    </div>
+    <span>Drone Cleaning Solutions</span>
+  </a>
+  <p>© 2026 Drone Cleaning Solutions. Mexico · El Salvador. All rights reserved.</p>
+  <ul class="footer-links">
+    <li><a href="#">Privacy Policy</a></li>
+    <li><a href="#">Terms of Service</a></li>
+    <li><a href="blog-drone-cleaning-latin-america.html">Blog</a></li>
+    <li><a href="#">LinkedIn</a></li>
+  </ul>
+</footer>
+
+<script>
+// Nav shadow on scroll
+const nav = document.querySelector('nav');
+window.addEventListener('scroll', () => {
+  nav.style.boxShadow = scrollY > 40 ? '0 2px 16px rgba(0,0,0,.08)' : '0 1px 3px rgba(0,0,0,.05)';
+});
+
+// Scroll reveal
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+  });
+}, { threshold: 0.07 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// Stat counters
+const sObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const target = +e.target.dataset.target;
+    if (!target) return;
+    const start = performance.now();
+    (function tick(now) {
+      const p = Math.min((now - start) / 1400, 1);
+      e.target.textContent = Math.floor(p * target);
+      if (p < 1) requestAnimationFrame(tick);
+      else e.target.textContent = target;
+    })(start);
+    sObs.unobserve(e.target);
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.stat-num[data-target]').forEach(el => sObs.observe(el));
+</script>
+</body>
+</html>
